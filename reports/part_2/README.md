@@ -5,7 +5,7 @@ This folder contains the Part 2 contribution to the shared project. It is organi
 | Section | Content | Status |
 |---|---|---|
 | [2A: data cleaning and validation](data_validation/README.md) | Five checks, figures, cleaning choices and report text | Complete |
-| 2B: broad-market portfolio | Portfolio construction and benchmark comparison | Pending |
+| [2B: broad-market portfolio](broad_market/README.md) | Score-weighted market returns, weight allocation and MSCI comparison | Both bullets complete |
 | 2C: value portfolios | Three weighting methods and performance comparisons | Pending |
 | 2D: active returns | Tracking error and factor correlations | Pending |
 

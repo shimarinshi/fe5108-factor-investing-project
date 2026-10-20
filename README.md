@@ -29,7 +29,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 | Course area | Implementation status | Required inputs |
 |---|---|---|
 | Part 1: factor investing | Not implemented | Shared FF/MSCI workbook uploaded; extraction and semantic checks pending |
-| Part 2: security-level portfolios | Part 2A implemented; Parts 2B–2D pending | Supplied anonymized security CSV; shared Part 1 benchmarks |
+| Part 2: security-level portfolios | Parts 2A–2B implemented; Parts 2C–2D pending | Supplied anonymized security CSV; shared Part 1 benchmarks |
 | Part 3: industry portfolio optimization | Not implemented | Industry workbook and shared FF/MSCI workbook uploaded; extraction pending |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
