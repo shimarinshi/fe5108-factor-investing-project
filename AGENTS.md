@@ -7,3 +7,18 @@ Read README.md, CONTRIBUTING.md and docs/data_contract.md before edits. Follow t
 Read `data/README.md` and `data/raw/source_manifest.json` before adding data, implementing a data consumer, or preparing a commit/push. The three course datasets are ALREADY UPLOADED at the canonical paths listed there. Reuse them; do not duplicate raw files in part-specific directories. Inspect staged changes for copies, including renamed copies. Future potentially shared sources must be added once and registered in both the manifest and data registry in the same change. If intermediate tables become shared inputs, register their canonical derived path, schema and producer too.
 
 Part-specific intermediate/result tables may be committed with their generating code and documented provenance; selective force-add is allowed for intentional deliverables in ignored output directories. Do not confuse derived tables with duplicate raw sources. Review the PR checklist before push. These rules apply to all parts and all agents, not just Part 2.
+
+## Chart style defaults
+
+Use these shared defaults for new charts so figures remain visually consistent across contributors and agents. These are presentation recommendations, not additional course requirements. Adapt where needed for clear multi-series comparisons or accessibility; keep color meanings consistent within a figure and across related figures.
+
+- Use English chart titles, axis labels, legends and annotations.
+- Use **DejaVu Sans** for chart text. There is no fixed font-size requirement; choose sizes that remain readable in the final report.
+- Use a white background (`#FFFFFF`).
+- Use teal-blue (`#246B83`) for the primary data series.
+- Use muted red (`#BD503B`) for selected highlights or unusual observations; do not imply an observation is erroneous solely by coloring it red.
+- Use dark blue-gray (`#213444`) for titles and axis labels, slate-gray (`#546471`) for secondary text and tick labels, and gray (`#65727C`) for source notes.
+- Use light gray (`#DFE5E9`) for subtle gridlines. Optional area shading may use the primary series color at about 7% opacity.
+- Avoid decorative borders and unnecessary visual clutter. For additional series, use clearly distinguishable colors and line styles rather than reusing the highlight color indiscriminately.
+
+For Matplotlib, set `font.family` to `DejaVu Sans` and pass the hex colors above explicitly. No particular plotting library or fixed figure dimensions are required.
