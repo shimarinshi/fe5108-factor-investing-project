@@ -18,15 +18,19 @@ python -m unittest discover -s tests -v
 
 On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the repository root; the runner also resolves files independently of the working directory. No API keys or network downloads are needed for the current bootstrap.
 
+## Shared course data — already uploaded
+
+**Before adding data or preparing a push, read [data/README.md](data/README.md).** The shared FF/MSCI workbook, security-level CSV and 49-industry workbook are already in `data/raw/`. Reuse them across parts; do not upload separate copies. New common data must follow the same registry process. Part-specific intermediate tables may be committed with their generating code.
+
 ## What runs today
 
 `python run_all.py` and `python run_all.py --all` both validate supplied source files and write a descriptive input inventory to `outputs/input_validation/`. This is a working **bootstrap**, not completed factor analysis. `--list` reports implemented tasks. Explicit requests for unimplemented parts fail rather than silently succeeding.
 
 | Course area | Implementation status | Required inputs |
 |---|---|---|
-| Part 1: factor investing | Not implemented | French factors and decile portfolios; MSCI USA gross total-return indices |
+| Part 1: factor investing | Not implemented | Shared FF/MSCI workbook uploaded; extraction and semantic checks pending |
 | Part 2: security-level portfolios | Raw input registered; analysis not implemented | Supplied anonymized security CSV; shared Part 1 benchmarks |
-| Part 3: industry portfolio optimization | Not implemented | French 49-industry value-weighted total returns; shared MSCI USA benchmark |
+| Part 3: industry portfolio optimization | Not implemented | Industry workbook and shared FF/MSCI workbook uploaded; extraction pending |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
 

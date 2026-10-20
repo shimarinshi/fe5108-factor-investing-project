@@ -13,6 +13,20 @@
       "sha256": "0f732221e32c07ba7dac4dc372578608c72bcd825db3127c339457dde3f2c31a",
       "source": "Instructor-provided course material",
       "received_date": "2026-10-20"
+    },
+    {
+      "original_filename": "class project data (FF MSCI) (parts 1 and 5).xlsx",
+      "path": "data/raw/ff_msci_shared.xlsx",
+      "sha256": "15a7873363b56cc83bdd94a3d3e0daae2ab3acc00cc1a68f7c983c6ef36cc827",
+      "source": "Instructor-provided shared course data",
+      "received_date": "2026-10-20"
+    },
+    {
+      "original_filename": "class project data (part 3 - pf construction).xlsx",
+      "path": "data/raw/industry_portfolios.xlsx",
+      "sha256": "7e451fdea86bf3fa717b94f840247725601e7081749b5c172bd4c047cef09933",
+      "source": "Instructor-provided shared course data",
+      "received_date": "2026-10-20"
     }
   ]
 }

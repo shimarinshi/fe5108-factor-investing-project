@@ -25,3 +25,7 @@ Generated outputs are ignored by default. If an output is needed for review or s
 ## Changes to the assignment
 
 Add each new handout as a separate snapshot and register its provenance. Update scope and README for newly released work. Do not invent future requirements, split responsibilities, or mark unfinished sections complete. Document methodological choices before comparing performance; never choose cleaning thresholds solely for better backtest results.
+
+## Shared data: mandatory pre-push review
+
+Read [the shared data registry](data/README.md) and its source manifest before every data-related change and before preparing a push. All three instructor datasets are already uploaded. Reuse canonical paths; do not upload renamed copies or put source files in personal/part-specific folders. New potentially shared source data must be registered once in `data/raw/`, the manifest and registry together. Shared derived tables need a canonical `data/processed/` path, schema and producer registration. Part-specific intermediate tables can be committed with their generating code; selectively force-add intended artifacts where ignored, never entire temporary output trees. Check staged files for duplicate content before push.
