@@ -34,21 +34,13 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
 
-## Part 2A: data cleaning and validation
+## Project navigation
 
-Use the existing `data/raw/security_characteristics.csv`; all checks cover the full supplied history (November 1998–March 2019 formation months). Run `python run_all.py --all` for all integrated tasks, or `python run_all.py --task <task>` for one row below.
+- [Shared input data](data/README.md)
+- [Reports by assignment part](reports/README.md)
+- [Part 2: security-level analysis](reports/part_2/README.md)
 
-| Assignment bullet | Method | Task / results directory under `outputs/` | Report |
-|---|---|---|---|
-| 1. Monthly stock counts | Count distinct stock IDs each month; highlight the two largest declines. | `monthly_stock_coverage` | [Stock coverage](reports/monthly_stock_coverage.md) |
-| 2. Return distribution and winsorization | Plot raw returns with a central-range view and a full-range log-frequency view; cap returns at each month's P1/P99 using linear-interpolated quantiles. | `return_distribution` | [Returns](reports/return_distribution.md) |
-| 3. Return coverage | Divide nonmissing raw returns by recorded stocks in each month; zero returns are valid. | `return_coverage` | [Return coverage](reports/return_coverage.md) |
-| 4. Standardized P/B distribution | Plot score frequencies; compare low Bv shares for Pb = 0.50 versus other records. Baseline value portfolios will exclude the affected stock-months, with inclusion as a robustness check. | `price_to_book_distribution` | [P/B diagnostic](reports/price_to_book_distribution.md) |
-| 5. P/B ratio sanity check | Within each month, hold one score approximately constant in ten rank bands; compute Spearman correlations between the other two and summarize the group medians. Compare excluding Pb = 0.50 with including it. | `valuation_sanity_check` | [Sanity check](reports/valuation_sanity_check.md) |
-
-Each results directory contains a PNG figure and its underlying CSV tables. PNGs and small tables are versioned for teammate review; SVGs are regenerated locally. Shared cleaned returns are generated at `data/processed/security_returns/winsorized_returns.csv`, with raw returns, winsorized returns, both month labels and an adjustment flag. They are not duplicated in Git; regenerate them with `return_distribution`. Subsequent portfolio calculations will use the winsorized returns. Portfolio construction and its robustness comparison remain Part 2B–2D work.
-
-Dependencies are pinned in `requirements.lock`. Regenerate the lock with `uv pip compile requirements.txt --python-version 3.12 --output-file requirements.lock`.
+Each part owns its report, code and output subdirectories. Section-specific methods and results belong inside that part, rather than on this team-wide page. Part 2A uses `reports/part_2/data_validation/`, `src/part_2/data_validation/` and `outputs/part_2/data_validation/`. All implemented analyses remain accessible through the shared `run_all.py` entry point.
 
 ## Layout
 

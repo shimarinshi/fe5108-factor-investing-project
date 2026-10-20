@@ -33,7 +33,7 @@ def run(root):
     if not dates:
         raise ValueError('No observations')
     ratios = [groups[d][1]/groups[d][0] for d in dates]
-    output = root/'outputs/return_coverage'
+    output = root/'outputs/part_2/data_validation/return_coverage'
     output.mkdir(parents=True, exist_ok=True)
     with (output/'monthly_return_coverage.csv').open('w', newline='') as stream:
         writer = csv.writer(stream)

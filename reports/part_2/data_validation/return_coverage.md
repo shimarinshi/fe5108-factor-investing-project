@@ -1,6 +1,6 @@
 # Return coverage
 
-![Monthly return coverage](../outputs/return_coverage/monthly_return_coverage.png)
+![Monthly return coverage](../../../outputs/part_2/data_validation/return_coverage/monthly_return_coverage.png)
 
 Return coverage is 100% in all 245 months of the supplied history, with no missing returns among 283,380 stock-month observations. No missing-return treatment is therefore required.
 
@@ -18,4 +18,4 @@ We would not use linear interpolation or mean imputation as the default for stoc
 
 Method reference: [CRSP aggregate return flags](https://www.crsp.org/wp-content/uploads/appendix/FlagType_AR.html) distinguish delisting returns, incomplete periods and missing-price cases. These are methodological examples, not evidence that the supplied teaching extract follows CRSP conventions.
 
-Source: `data/raw/security_characteristics.csv`, raw `R1M_Usd`. Figure and monthly counts: `outputs/return_coverage/`. Producer: `src/return_coverage.py`, registered as `return_coverage` in `run_all.py`. Missing checks cover blank strings, NA/NaN/null and nonfinite numeric values; no undocumented numeric sentinel conventions are imposed.
+Source: `data/raw/security_characteristics.csv`, raw `R1M_Usd`. Figure and monthly counts: `outputs/part_2/data_validation/return_coverage/`. Producer: `src/part_2/data_validation/return_coverage.py`, registered as `return_coverage` in `run_all.py`. Missing checks cover blank strings, NA/NaN/null and nonfinite numeric values; no undocumented numeric sentinel conventions are imposed.

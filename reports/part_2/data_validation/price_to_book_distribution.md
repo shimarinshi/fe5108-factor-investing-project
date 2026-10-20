@@ -1,6 +1,6 @@
 # Standardized price-to-book distribution
 
-![P/B distribution and low book equity](../outputs/price_to_book_distribution/price_to_book_distribution.png)
+![P/B distribution and low book equity](../../../outputs/part_2/data_validation/price_to_book_distribution/price_to_book_distribution.png)
 
 The standardized P/B distribution has a clear spike at 0.50, with 10,197 stock-month observations (3.60% of the sample). The adjacent scores, 0.49 and 0.51, contain 2,812 and 2,797 observations, respectively.
 
@@ -12,4 +12,4 @@ The figure pools all observations from November 1998 to March 2019. Panel A uses
 
 Source: `data/raw/security_characteristics.csv`. HML methodology: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html
 
-Producer: `src/price_to_book_distribution.py`; run `python run_all.py --task price_to_book_distribution`. Figure (PNG/SVG) and both underlying tables are in `outputs/price_to_book_distribution/`. No observations or features are changed by this diagnostic.
+Producer: `src/part_2/data_validation/price_to_book_distribution.py`; run `python run_all.py --task price_to_book_distribution`. Figure (PNG/SVG) and both underlying tables are in `outputs/part_2/data_validation/price_to_book_distribution/`. No observations or features are changed by this diagnostic.

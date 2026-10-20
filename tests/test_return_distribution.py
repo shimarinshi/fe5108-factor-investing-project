@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from src.return_distribution import winsorize_month
+from src.part_2.data_validation.return_distribution import winsorize_month
 
 
 class ReturnWinsorizationTests(unittest.TestCase):

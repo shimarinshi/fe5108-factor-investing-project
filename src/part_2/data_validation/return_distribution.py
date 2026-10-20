@@ -31,7 +31,7 @@ def write_csv(path, columns, rows):
 
 def run(root):
     root = Path(root)
-    output = root / 'outputs/return_distribution'
+    output = root / 'outputs/part_2/data_validation/return_distribution'
     processed = root / 'data/processed/security_returns'
     output.mkdir(parents=True, exist_ok=True)
     processed.mkdir(parents=True, exist_ok=True)
@@ -133,7 +133,7 @@ def run(root):
     (output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
     text = f'''# Return distribution and winsorization
 
-![Distribution of raw stock returns](../outputs/return_distribution/raw_return_distribution.png)
+![Distribution of raw stock returns](../../../outputs/part_2/data_validation/return_distribution/raw_return_distribution.png)
 
 Raw monthly stock returns range from {valid.min():.1%} to {valid.max():,.1%}. Both tails contain extreme observations, with a much more pronounced upside tail. For comparison, the pooled 1st and 99th percentiles are {lo:.1%} and {hi:.1%}. Extreme values alone do not establish data errors.
 
@@ -143,7 +143,7 @@ We winsorize stock returns at the 1st and 99th percentiles within each month (an
 
 Source: `data/raw/security_characteristics.csv`; all {len(groups)} formation months from November 1998 through March 2019. Returns are one month forward, covering December 1998 through April 2019. The figure uses pooled percentiles only for display; these are not the monthly cleaning thresholds.
 
-Monthly thresholds and changed counts: `outputs/return_distribution/monthly_winsorization.csv`. Histogram bins: `outputs/return_distribution/histogram_counts.csv`. Cleaned returns: `data/processed/security_returns/winsorized_returns.csv`. Producer: `src/return_distribution.py`, registered as `return_distribution` in `run_all.py`.
+Monthly thresholds and changed counts: `outputs/part_2/data_validation/return_distribution/monthly_winsorization.csv`. Histogram bins: `outputs/part_2/data_validation/return_distribution/histogram_counts.csv`. Cleaned returns: `data/processed/security_returns/winsorized_returns.csv`. Producer: `src/part_2/data_validation/return_distribution.py`, registered as `return_distribution` in `run_all.py`.
 '''
-    (root/'reports/return_distribution.md').write_text(text)
+    (root/'reports/part_2/data_validation/return_distribution.md').write_text(text)
     print(json.dumps(summary))

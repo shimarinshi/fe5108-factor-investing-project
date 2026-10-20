@@ -16,7 +16,7 @@ def run(root):
     bv=np.array([float(r['Bv']) for r in rows])
     assert np.isfinite(pb).all() and np.isfinite(bv).all()
     mask=pb==.5
-    output=root/'outputs/price_to_book_distribution'
+    output=root/'outputs/part_2/data_validation/price_to_book_distribution'
     output.mkdir(parents=True,exist_ok=True)
     values,counts=np.unique(pb,return_counts=True)
     with (output/'pb_frequency.csv').open('w',newline='') as stream:
@@ -68,7 +68,7 @@ def run(root):
     plt.close(fig)
     report=f'''# Standardized price-to-book distribution
 
-![P/B distribution and low book equity](../outputs/price_to_book_distribution/price_to_book_distribution.png)
+![P/B distribution and low book equity](../../../outputs/part_2/data_validation/price_to_book_distribution/price_to_book_distribution.png)
 
 The standardized P/B distribution has a clear spike at 0.50, with {mask.sum():,} stock-month observations ({mask.mean():.2%} of the sample). The adjacent scores, 0.49 and 0.51, contain {int((pb==.49).sum()):,} and {int((pb==.51).sum()):,} observations, respectively.
 
@@ -80,7 +80,7 @@ The figure pools all observations from November 1998 to March 2019. Panel A uses
 
 Source: `data/raw/security_characteristics.csv`. HML methodology: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html
 
-Producer: `src/price_to_book_distribution.py`; run `python run_all.py --task price_to_book_distribution`. Figure (PNG/SVG) and both underlying tables are in `outputs/price_to_book_distribution/`. No observations or features are changed by this diagnostic.
+Producer: `src/part_2/data_validation/price_to_book_distribution.py`; run `python run_all.py --task price_to_book_distribution`. Figure (PNG/SVG) and both underlying tables are in `outputs/part_2/data_validation/price_to_book_distribution/`. No observations or features are changed by this diagnostic.
 '''
-    (root/'reports/price_to_book_distribution.md').write_text(report)
+    (root/'reports/part_2/data_validation/price_to_book_distribution.md').write_text(report)
     print(stats)

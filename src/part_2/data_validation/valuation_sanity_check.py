@@ -57,7 +57,7 @@ def run(root):
             summary.append([label, '+' if sign > 0 else '-', sample, len(correlations),
                             skipped, float(np.median(correlations)),
                             float(np.mean(np.array(correlations)*sign > 0))])
-    out = root/'outputs/valuation_sanity_check'
+    out = root/'outputs/part_2/data_validation/valuation_sanity_check'
     out.mkdir(parents=True, exist_ok=True)
     for name, header, rows in [
         ('group_correlations.csv', ['check','sample','formation_month','rank_band','observations','spearman_rho'], details),
@@ -119,7 +119,7 @@ def run(root):
         table.append(f'| {main[0]} | {main[1]} | {main[5]:.3f} | {main[6]:.1%} | {control[5]:.3f} |')
     text='''# Valuation sanity check
 
-![Valuation sanity check](../outputs/valuation_sanity_check/valuation_sanity_check.png)
+![Valuation sanity check](../../../outputs/part_2/data_validation/valuation_sanity_check/valuation_sanity_check.png)
 
 Starting from P/B = market capitalization / book equity, we compare stocks with similar ranks in one characteristic and check the relationship between the other two. With positive book equity, similar Bv implies a positive relationship between market cap and P/B; similar market cap implies a negative relationship between Bv and P/B; similar P/B implies a positive relationship between market cap and Bv.
 
@@ -129,8 +129,8 @@ Within each month, we place stocks in ten fixed bands of the supplied score for 
 
 This is a directional consistency check, not verification of the accounting identity. Similar percentile ranks do not guarantee similar raw amounts, Bv ranks do not identify negative equity, and the supplied market-cap field is a three-month average that may differ from the denominator timing used for P/B. We do not divide percentile scores or interpret these correlations as causal effects.
 
-Source: `data/raw/security_characteristics.csv`; all supplied formation months, November 1998–March 2019. The grouped horizontal bar chart uses a common −1 to +1 scale, teal for the exclusion sample and gray for the full sample. Labels show expected signs and observed medians. The PNG/SVG figure and detailed and summary tables are in `outputs/valuation_sanity_check/`. Run `python run_all.py --task valuation_sanity_check`. This diagnostic does not modify any observations.
+Source: `data/raw/security_characteristics.csv`; all supplied formation months, November 1998–March 2019. The grouped horizontal bar chart uses a common −1 to +1 scale, teal for the exclusion sample and gray for the full sample. Labels show expected signs and observed medians. The PNG/SVG figure and detailed and summary tables are in `outputs/part_2/data_validation/valuation_sanity_check/`. Run `python run_all.py --task valuation_sanity_check`. This diagnostic does not modify any observations.
 '''
-    (root/'reports/valuation_sanity_check.md').write_text(text)
+    (root/'reports/part_2/data_validation/valuation_sanity_check.md').write_text(text)
     print('\n'.join(table))
     print('Valid/skipped groups:',[(r[0],r[2],r[3],r[4]) for r in summary])

@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from src.valuation_sanity_check import average_ranks, spearman
+from src.part_2.data_validation.valuation_sanity_check import average_ranks, spearman
 
 
 class RankCorrelationTests(unittest.TestCase):

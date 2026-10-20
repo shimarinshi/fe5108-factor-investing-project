@@ -22,3 +22,7 @@ Use these shared defaults for new charts so figures remain visually consistent a
 - Avoid decorative borders and unnecessary visual clutter. For additional series, use clearly distinguishable colors and line styles rather than reusing the highlight color indiscriminately.
 
 For Matplotlib, set `font.family` to `DejaVu Sans` and pass the hex colors above explicitly. No particular plotting library or fixed figure dimensions are required.
+
+## Assignment hierarchy
+
+Keep the team-wide README concise: shared setup, part-level status and navigation only. Organize each contribution by assignment part, then section, using descriptive section names. Part 2A lives under `reports/part_2/data_validation/`, `src/part_2/data_validation/` and `outputs/part_2/data_validation/`. The part and report-section directories have README entry pages. Do not flatten individual analyses into shared top-level directories or create contributor-named silos. Later sections belong alongside data_validation; do not scaffold unimplemented sections just to fill the tree. Shared raw data and genuinely shared derived datasets keep their registered canonical paths. Keep all tasks integrated through run_all.py and render figures inline in section reports.

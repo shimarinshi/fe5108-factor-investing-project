@@ -3,11 +3,11 @@ import argparse
 import sys
 from pathlib import Path
 from src.input_validation import run as validate_inputs
-from src.monthly_stock_coverage import run as monthly_stock_coverage
-from src.return_distribution import run as return_distribution
-from src.return_coverage import run as return_coverage
-from src.price_to_book_distribution import run as price_to_book_distribution
-from src.valuation_sanity_check import run as valuation_sanity_check
+from src.part_2.data_validation.monthly_stock_coverage import run as monthly_stock_coverage
+from src.part_2.data_validation.return_distribution import run as return_distribution
+from src.part_2.data_validation.return_coverage import run as return_coverage
+from src.part_2.data_validation.price_to_book_distribution import run as price_to_book_distribution
+from src.part_2.data_validation.valuation_sanity_check import run as valuation_sanity_check
 
 ROOT = Path(__file__).resolve().parent
 TASKS = {'validate_inputs': validate_inputs, 'monthly_stock_coverage': monthly_stock_coverage,

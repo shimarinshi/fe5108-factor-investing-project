@@ -114,7 +114,7 @@ def create_outputs(source, output):
 def run(root):
     root = Path(root)
     create_outputs(root / "data/raw/security_characteristics.csv",
-                   root / "outputs/monthly_stock_coverage")
+                   root / "outputs/part_2/data_validation/monthly_stock_coverage")
 
 
 if __name__ == "__main__":
