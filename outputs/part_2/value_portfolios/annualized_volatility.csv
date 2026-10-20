@@ -1,0 +1,5 @@
+strategy,months,monthly_sample_standard_deviation,annualized_standard_deviation
+value_top20_equal,240,0.063565706129,0.220198065267
+value_score,240,0.053972955879,0.186967803635
+value_score_times_size,240,0.050005020687,0.173222472928
+market_score_weighted,240,0.047581106702,0.164825788576

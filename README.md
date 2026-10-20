@@ -24,12 +24,12 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 ## What runs today
 
-`python run_all.py` and `python run_all.py --all` validate supplied source files, write a descriptive input inventory to `outputs/input_validation/`, and generate the five Part 2A diagnostics and monthly winsorized returns. `--list` reports implemented tasks. Explicit requests for unimplemented tasks fail rather than silently succeeding.
+`python run_all.py` and `python run_all.py --all` validate supplied source files, write a descriptive input inventory to `outputs/input_validation/`, and generate the five Part 2A diagnostics, monthly winsorized returns, Part 2B market comparison and Part 2C value-portfolio returns, volatility and final-period holdings comparisons. `--list` reports implemented tasks. Explicit requests for unimplemented tasks fail rather than silently succeeding.
 
 | Course area | Implementation status | Required inputs |
 |---|---|---|
 | Part 1: factor investing | Not implemented | Shared FF/MSCI workbook uploaded; extraction and semantic checks pending |
-| Part 2: security-level portfolios | Parts 2A–2B implemented; Parts 2C–2D pending | Supplied anonymized security CSV; shared Part 1 benchmarks |
+| Part 2: security-level portfolios | Parts 2A–2C implemented; Part 2D pending | Supplied anonymized security CSV; shared Part 1 benchmarks |
 | Part 3: industry portfolio optimization | Not implemented | Industry workbook and shared FF/MSCI workbook uploaded; extraction pending |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.

@@ -13,11 +13,13 @@ from src.part_2.broad_market.market_portfolio import run as market_portfolio
 
 from src.part_2.broad_market.benchmark_comparison import run as benchmark_comparison
 
+from src.part_2.value_portfolios.value_returns import run as value_returns
+
 ROOT = Path(__file__).resolve().parent
 TASKS = {'validate_inputs': validate_inputs, 'monthly_stock_coverage': monthly_stock_coverage,
          'return_distribution': return_distribution, 'return_coverage': return_coverage,
          'price_to_book_distribution': price_to_book_distribution,
-         'valuation_sanity_check': valuation_sanity_check, 'market_portfolio': market_portfolio, 'benchmark_comparison': benchmark_comparison}
+         'valuation_sanity_check': valuation_sanity_check, 'market_portfolio': market_portfolio, 'benchmark_comparison': benchmark_comparison, 'value_returns': value_returns}
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)

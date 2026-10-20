@@ -1,0 +1,4 @@
+strategy,formation_month,return_month,stocks_held,maximum_single_stock_weight
+value_top20_equal,2018-11,2018-12,218,0.004587155963
+value_score,2018-11,2018-12,1057,0.001849078235
+value_score_times_size,2018-11,2018-12,1057,0.003954397430
