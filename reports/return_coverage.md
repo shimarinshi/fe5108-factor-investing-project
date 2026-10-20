@@ -1,5 +1,7 @@
 # Return coverage
 
+![Monthly return coverage](../outputs/return_coverage/monthly_return_coverage.png)
+
 Return coverage is 100% in all 245 months of the supplied history, with no missing returns among 283,380 stock-month observations. No missing-return treatment is therefore required.
 
 The figure uses a compact time-series line chart with a 0–100% reference scale and headroom above 100% to keep the line visible. A single annotation summarizes the constant coverage; repeated monthly labels would add no information. Coverage is measured within the stocks recorded each month, so it does not establish that the stock universe itself is complete. Zero returns count as observed. Dates are formation months, November 1998–March 2019; the return field refers to the following month.
