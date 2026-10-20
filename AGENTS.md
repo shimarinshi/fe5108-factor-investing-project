@@ -1,0 +1,3 @@
+# Repository instructions
+
+Read README.md, CONTRIBUTING.md and docs/data_contract.md before edits. Follow the same integration requirements as human contributors. Work only in this repository; do not change earlier course projects. Keep documentation and identifiers in English. Do not invent results, future assignment requirements or contributor roles. Preserve raw sources and never insert credentials. An analysis is integrated only when it is reachable from run_all.py, documented and checked. Report missing inputs and unfinished work explicitly. Do not publish or change repository visibility without user authorization.

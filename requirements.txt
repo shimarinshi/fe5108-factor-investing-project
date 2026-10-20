@@ -1,0 +1,3 @@
+# Bootstrap uses the Python standard library only.
+# Add exact package pins here when analytical modules need them.
+# Do not copy a workstation pip freeze; document and test dependency changes.

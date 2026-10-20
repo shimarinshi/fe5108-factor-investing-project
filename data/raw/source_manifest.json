@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "original_filename": "class project (fall 2026) (post class 3).pdf",
+      "path": "inputs/class_project_post_class_3.pdf",
+      "sha256": "49fb9d6b9442806f8b13b26778baf7dcfee68fe1e23be0fd0cdda4d8b39c5ad8",
+      "source": "Instructor-provided course material",
+      "received_date": "2026-10-20"
+    },
+    {
+      "original_filename": "class project data (part 2 - factor portfolio construction).csv",
+      "path": "data/raw/security_characteristics.csv",
+      "sha256": "0f732221e32c07ba7dac4dc372578608c72bcd825db3127c339457dde3f2c31a",
+      "source": "Instructor-provided course material",
+      "received_date": "2026-10-20"
+    }
+  ]
+}
