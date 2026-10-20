@@ -3,9 +3,17 @@ import argparse
 import sys
 from pathlib import Path
 from src.input_validation import run as validate_inputs
+from src.monthly_stock_coverage import run as monthly_stock_coverage
+from src.return_distribution import run as return_distribution
+from src.return_coverage import run as return_coverage
+from src.price_to_book_distribution import run as price_to_book_distribution
+from src.valuation_sanity_check import run as valuation_sanity_check
 
 ROOT = Path(__file__).resolve().parent
-TASKS = {'validate_inputs': validate_inputs}
+TASKS = {'validate_inputs': validate_inputs, 'monthly_stock_coverage': monthly_stock_coverage,
+         'return_distribution': return_distribution, 'return_coverage': return_coverage,
+         'price_to_book_distribution': price_to_book_distribution,
+         'valuation_sanity_check': valuation_sanity_check}
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -22,7 +30,7 @@ def main():
     for name in ([args.task] if args.task else TASKS):
         print(f'Running {name}')
         TASKS[name](ROOT)
-    print('All registered tasks passed. Course analyses are not yet implemented.')
+    print('All registered tasks passed. Only documented tasks are implemented; remaining analyses are pending.')
 
 if __name__ == '__main__':
     main()

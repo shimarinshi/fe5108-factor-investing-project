@@ -26,4 +26,4 @@ If a derived table becomes useful to multiple parts, promote it to a documented 
 
 ## Shared derived datasets
 
-None registered yet. Individual intermediate outputs do not automatically become shared contracts.
+- `data/processed/security_returns/winsorized_returns.csv`: produced by `return_distribution` in `run_all.py` from the canonical security CSV. One row per `stock_id, formation_month`; columns: `stock_id`, `formation_month`, `return_month` (YYYY-MM), `raw_return`, `winsorized_return` (decimal returns), `was_winsorized` (boolean). No rows dropped. Raw returns are retained; monthly P1/P99 caps use linear interpolation. Available for subsequent Part 2 portfolio tasks. Missing returns remain blank.

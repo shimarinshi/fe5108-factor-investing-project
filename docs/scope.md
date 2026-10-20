@@ -1,7 +1,7 @@
 # Released scope and open decisions
 
-The retained post-class-3 handout releases Part 1 (factor investing), Part 2 (security-level analysis) and Part 3 (industry optimization). This repository is prepared for additional releases, with no invented later parts or assigned team roles.
+The retained post-class-3 handout releases Parts 1–3. No later requirements or team roles are inferred.
 
-Current deliverable: shared project structure, unchanged course inputs, source manifest, executable input validation, contribution rules, tests and CI. No investment conclusions, portfolio backtests or completed assignment answers are claimed.
+Part 2A now covers all five bullets: monthly stock counts, raw-return distributions and monthly P1/P99 winsorization, return coverage, standardized P/B concentration, and rank-based valuation sanity checks. Raw shared sources are unchanged. Code is registered in run_all.py; figures, tables and English report sections document the methods and findings.
 
-The three instructor data files are now registered in data/README.md. Before analysis, inspect their sheets, confirm required coverage, record units and observation periods, agree the 99% winsorization convention and ambiguous P/B treatment, and document missing-return and rebalancing assumptions. The handout remains the source of requirements; repository conventions describe implementation choices rather than additional instructor demands.
+For subsequent value portfolios, exclude Pb = 0.50 stock-months in the baseline and include them in a robustness comparison. This does not establish negative book equity. No portfolio backtests or robustness performance results are claimed yet. Parts 1, 2B–2D and 3 remain unimplemented. Benchmark extraction, portfolio weighting, rebalancing and performance conventions still require implementation in their respective tasks.

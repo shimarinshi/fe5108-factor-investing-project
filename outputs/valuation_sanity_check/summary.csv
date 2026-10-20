@@ -1,0 +1,7 @@
+check,expected_sign,sample,valid_groups,skipped_groups,median_rho,share_expected_sign
+Similar Bv,+,Exclude Pb = 0.50,2446,4,0.8984310463403912,1.0
+Similar Bv,+,Include all,2446,4,0.89329201369365,1.0
+Similar market cap,-,Exclude Pb = 0.50,2445,5,-0.8969223273704287,1.0
+Similar market cap,-,Include all,2445,5,-0.8590353048954718,1.0
+Similar Pb,+,Exclude Pb = 0.50,2450,0,0.9772797331097249,1.0
+Similar Pb,+,Include all,2450,0,0.9741437676201885,1.0
