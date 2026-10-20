@@ -119,6 +119,8 @@ def run(root):
         table.append(f'| {main[0]} | {main[1]} | {main[5]:.3f} | {main[6]:.1%} | {control[5]:.3f} |')
     text='''# Valuation sanity check
 
+![Valuation sanity check](../outputs/valuation_sanity_check/valuation_sanity_check.png)
+
 Starting from P/B = market capitalization / book equity, we compare stocks with similar ranks in one characteristic and check the relationship between the other two. With positive book equity, similar Bv implies a positive relationship between market cap and P/B; similar market cap implies a negative relationship between Bv and P/B; similar P/B implies a positive relationship between market cap and Bv.
 
 Within each month, we place stocks in ten fixed bands of the supplied score for the characteristic held approximately constant: (0, 0.10], ..., (0.90, 1.00]. We calculate Spearman correlations within each band, using average ranks for ties, then report the median across month-band groups. The main check excludes Pb = 0.50; retaining these observations provides a comparison. Groups with fewer than ten observations or a constant compared variable are skipped and counted in the summary CSV. Each valid group receives equal weight; the percentages below refer to groups, not stocks.

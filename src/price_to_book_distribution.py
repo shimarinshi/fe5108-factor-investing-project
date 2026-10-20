@@ -68,6 +68,8 @@ def run(root):
     plt.close(fig)
     report=f'''# Standardized price-to-book distribution
 
+![P/B distribution and low book equity](../outputs/price_to_book_distribution/price_to_book_distribution.png)
+
 The standardized P/B distribution has a clear spike at 0.50, with {mask.sum():,} stock-month observations ({mask.mean():.2%} of the sample). The adjacent scores, 0.49 and 0.51, contain {int((pb==.49).sum()):,} and {int((pb==.51).sum()):,} observations, respectively.
 
 We define very low book equity as a supplied Bv score of 0.05 or below and also check thresholds of 0.01 and 0.10. Among observations with Pb = 0.50, 5,976 (58.6%) meet the 0.05 threshold, compared with 3.0% of other observations. At thresholds of 0.01 and 0.10, the corresponding shares are 28.5% versus 0.004%, and 61.8% versus 8.2%. Thus, the 0.50 concentration is strongly associated with low book-equity ranks, but not every observation in this group has low Bv: 41.4% lie above 0.05.
