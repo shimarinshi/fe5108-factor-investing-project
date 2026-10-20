@@ -110,6 +110,8 @@ def run(root):
     save_csv(out/'robustness_including_pb_half.csv', ['strategy','month','return'], robustness)
     series = [np.array([r[2] for r in returns if r[0]==s]) for s in STRATEGIES]
     series.append(np.array([float(r['return']) for r in market_rows]))
+    # Match the persisted monthly-return precision before compounding on any platform.
+    series = [np.round(r, 12) for r in series]
     volatility = [annualized_volatility(r) for r in series]
     save_csv(out/'annualized_volatility.csv',
              ['strategy','months','monthly_sample_standard_deviation','annualized_standard_deviation'],
