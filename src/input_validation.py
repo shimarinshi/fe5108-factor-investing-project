@@ -55,4 +55,4 @@ def run(root):
     output = root / 'outputs/input_validation'
     output.mkdir(parents=True, exist_ok=True)
     (output / 'summary.json').write_text(json.dumps(report, indent=2, allow_nan=False) + '\n')
-    print(f"Validated {report['rows']:,} raw rows; analysis remains unimplemented.")
+    print(f"Validated {report['rows']:,} raw rows; source integrity/schema checks only.")

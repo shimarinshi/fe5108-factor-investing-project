@@ -16,13 +16,13 @@ The supplied security CSV is an anonymized course extract attributed by the hand
 | Mkt_Cap_3M_Usd | Standardized market-cap field, not dollars or true company capitalization |
 | Vol3Y_Usd | Standardized volatility field, not a directly usable annual volatility estimate |
 
-The actual supplied standardized fields range from 0.01 to 1.00; the handout describes percentile ranks with 100 highest. Record this scale difference explicitly; do not blindly multiply or reinterpret it. Do not divide percentile market cap by percentile book equity to claim recovery of actual P/B. Book-to-price construction requires a documented ranking transformation and treatment of ambiguous P/B values; taking the reciprocal of a percentile is not the reciprocal of a raw ratio.
+The actual supplied standardized fields range from 0.01 to 1.00; the handout describes percentile ranks with 100 highest. Record this scale difference explicitly; do not blindly multiply or reinterpret it. Do not divide percentile market cap by percentile book equity to claim recovery of actual P/B. Subsequent value portfolios will exclude Pb = 0.50 stock-months in the baseline and retain them in a robustness comparison; this is not proof of negative equity. Book-to-price construction still requires a documented ranking transformation; taking the reciprocal of a percentile is not the reciprocal of a raw ratio.
 
 For Part 2 performance, formation months December 1998–November 2018 correspond to return months January 1999–December 2018. Store both dates; join benchmarks on RETURN month. Future returns are outcomes, never selection features. Availability in the teaching file does not independently prove point-in-time provenance.
 
-## Cleaning decisions still to implement
+## Return cleaning and remaining decisions
 
-The handout requests per-period 99% winsorization. Before implementation, document whether this means 1st/99th percentiles or a central 99% interval, the quantile interpolation and treatment of ties. Keep raw and cleaned return columns separately. Do not silently fill missing returns, discard outliers, change the universe using future outcomes, or renormalize only over winners/survivors. Record the chosen missing-return/weight treatment and its implications.
+The agreed interpretation is monthly 1st/99th percentile winsorization (an alternative is 0.5th/99.5th). The return_distribution task uses NumPy linear-interpolated quantiles and caps values strictly outside the thresholds; ties remain unchanged. Missing returns are excluded from quantiles and preserved. Raw and cleaned return columns are stored separately. Pooled percentiles are only display limits. Do not silently fill missing returns, discard outliers, change the universe using future outcomes, or renormalize only over winners/survivors. Record the chosen missing-return/weight treatment and its implications.
 
 The bootstrap records ranges and missingness without changing observations. Its passed checks prove file integrity/schema and unique stock-date keys, not economic correctness or completed Part 2A cleaning.
 
