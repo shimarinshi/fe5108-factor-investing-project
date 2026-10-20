@@ -81,7 +81,9 @@ def run(root):
     for panel, ax, edges in zip(['central', 'full'], axes, [central_edges, full_edges]):
         counts, edges, patches = ax.hist(valid, bins=edges, color=blue,
                                          edgecolor='white', linewidth=.25)
-        histograms.extend((panel, float(a), float(b), int(n))
+        # Normalize exported edge precision across ARM/x86 floating-point arithmetic.
+        # This affects CSV representation only, not bins or counted observations.
+        histograms.extend((panel, f'{a:.12f}', f'{b:.12f}', int(n))
                           for a,b,n in zip(edges[:-1],edges[1:],counts))
         ax.set_axisbelow(True)
         ax.grid(axis='y', color='#DFE5E9', linewidth=.6)
