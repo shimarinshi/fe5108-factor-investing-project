@@ -1,0 +1,4 @@
+strategy,months,monthly_active_sample_sd,annualized_tracking_error
+value_top20_equal,240,0.027445757918,0.095074894331
+value_score,240,0.014255044804,0.049380923731
+value_score_times_size,240,0.008262615761,0.028622540603

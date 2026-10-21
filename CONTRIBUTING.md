@@ -8,7 +8,7 @@ Do not name analytical files `exhibit_2`, `question_3`, `final_final` or after a
 
 ## Runtime and dependencies
 
-Python 3.12.14 is the reproducibility baseline. Any version change updates `.python-version`, CI and README in the same PR. Pin all introduced runtime packages exactly in `requirements.txt`; for transitive dependencies add a reproducible lock when numerical dependencies arrive. The current bootstrap has no third-party dependencies. Test a clean virtual environment, not just a notebook kernel. Avoid unused dependencies.
+Python 3.12.14 is the reproducibility baseline. Any version change updates `.python-version`, CI and README in the same PR. Pin all introduced runtime packages exactly in `requirements.txt`; for transitive dependencies add a reproducible lock when numerical dependencies arrive. Runtime dependencies are recorded in requirements.txt and requirements.lock. Test a clean virtual environment, not just a notebook kernel. Avoid unused dependencies.
 
 ## Integration and submission
 

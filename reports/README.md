@@ -5,7 +5,7 @@ Reports are organized by assignment part, then by section. Each section has one 
 | Part | Report entry | Status |
 |---|---|---|
 | Part 1: factor investing | Not yet added | Pending |
-| Part 2: security-level analysis | [Part 2](part_2/README.md) | 2A–2B complete; 2C–2D pending |
+| Part 2: security-level analysis | [Part 2](part_2/README.md) | 2A–2D complete |
 | Part 3: portfolio construction | Not yet added | Pending |
 
 [Project overview](../README.md)
