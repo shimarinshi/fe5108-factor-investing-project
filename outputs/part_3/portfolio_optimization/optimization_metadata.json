@@ -1,0 +1,29 @@
+{
+  "covariance_ddof": 1,
+  "estimation_end": "2004-12",
+  "estimation_months": 120,
+  "estimation_start": "1995-01",
+  "formation_date": "2004-12-31",
+  "highlight_ties": "Original industry order for exact ties",
+  "industries": 49,
+  "return_type": "Value-weighted monthly total returns",
+  "return_units": "Decimal",
+  "software_versions": {
+    "jinja2": "3.1.6",
+    "matplotlib": "3.10.9",
+    "numpy": "2.4.6",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.3",
+    "python": "3.12.14",
+    "scipy": "1.18.0"
+  },
+  "solver": "SLSQP",
+  "solver_ftol": 1e-12,
+  "solver_iterations": 53,
+  "solver_maxiter": 5000,
+  "solver_success": true,
+  "source": "data/raw/industry_portfolios.xlsx",
+  "source_sha256": "7e451fdea86bf3fa717b94f840247725601e7081749b5c172bd4c047cef09933",
+  "weight_tolerance": 1e-08,
+  "worksheet": "49_Industry_Portfolios"
+}

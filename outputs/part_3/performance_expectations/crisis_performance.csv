@@ -1,0 +1,3 @@
+crisis,period,months,minimum_variance_return,msci_usa_return,difference_percentage_points
+Global Financial Crisis,2008-09 to 2009-02,6,-0.403270518221384,-0.417622835400951,1.43523171795672
+COVID sell-off,2020-02 to 2020-03,2,-0.212451933772942,-0.198037860458726,-1.44140733142155

@@ -1,0 +1,4 @@
+strategy_code,strategy,months,annualized_volatility
+min_var_short,Minimum variance (shorting allowed),120,0.0758611197501668
+min_var_long_only,Minimum variance (long only),120,0.103155941023136
+inverse_volatility,Inverse volatility,120,0.139888761128386

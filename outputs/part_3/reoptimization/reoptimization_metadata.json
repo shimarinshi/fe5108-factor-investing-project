@@ -1,0 +1,36 @@
+{
+  "covariance_ddof": 1,
+  "evaluation_months": 91,
+  "evaluation_period": [
+    "2016-01",
+    "2023-07"
+  ],
+  "original_estimation_period": [
+    "1995-01",
+    "2004-12"
+  ],
+  "rebalancing": "Monthly to fixed target weights",
+  "software_versions": {
+    "jinja2": "3.1.6",
+    "matplotlib": "3.10.9",
+    "numpy": "2.4.6",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.3",
+    "python": "3.12.14",
+    "scipy": "1.18.0"
+  },
+  "solver": "SLSQP",
+  "solver_ftol": 1e-12,
+  "solver_iterations": 41,
+  "solver_maxiter": 5000,
+  "solver_success": true,
+  "source": "data/raw/industry_portfolios.xlsx",
+  "transaction_costs": "Excluded",
+  "updated_estimation_period": [
+    "2006-01",
+    "2015-12"
+  ],
+  "updated_formation_date": "2015-12-31",
+  "volatility_change_percentage_points": -1.710854269296966,
+  "weight_tolerance": 1e-08
+}

@@ -1,0 +1,21 @@
+crisis,rank,industry,cumulative_return
+Global Financial Crisis,1,Gold,-0.116386562837854
+Global Financial Crisis,2,Beer,-0.222553714069235
+Global Financial Crisis,3,PerSv,-0.240807214044101
+Global Financial Crisis,4,Drugs,-0.241405687542754
+Global Financial Crisis,5,Food,-0.243185462767561
+Global Financial Crisis,6,Meals,-0.260625879575466
+Global Financial Crisis,7,Soda,-0.294270665166801
+Global Financial Crisis,8,Smoke,-0.296062302776941
+Global Financial Crisis,9,Rtail,-0.300216799180315
+Global Financial Crisis,10,Util,-0.325770703626722
+COVID sell-off,1,Gold,-0.0320945500000001
+COVID sell-off,2,Drugs,-0.0706551900000001
+COVID sell-off,3,Rtail,-0.1025865
+COVID sell-off,4,Smoke,-0.12708547
+COVID sell-off,5,Food,-0.13137118
+COVID sell-off,6,Softw,-0.14572032
+COVID sell-off,7,Hshld,-0.1463895
+COVID sell-off,8,LabEq,-0.15883608
+COVID sell-off,9,Boxes,-0.16227958
+COVID sell-off,10,Paper,-0.16473169

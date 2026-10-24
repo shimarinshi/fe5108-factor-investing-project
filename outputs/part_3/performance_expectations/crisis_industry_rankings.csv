@@ -1,0 +1,99 @@
+crisis,rank,industry,cumulative_return
+Global Financial Crisis,1,Gold,-0.116386562837854
+Global Financial Crisis,2,Beer,-0.222553714069235
+Global Financial Crisis,3,PerSv,-0.240807214044101
+Global Financial Crisis,4,Drugs,-0.241405687542754
+Global Financial Crisis,5,Food,-0.243185462767561
+Global Financial Crisis,6,Meals,-0.260625879575466
+Global Financial Crisis,7,Soda,-0.294270665166801
+Global Financial Crisis,8,Smoke,-0.296062302776941
+Global Financial Crisis,9,Rtail,-0.300216799180315
+Global Financial Crisis,10,Util,-0.325770703626722
+Global Financial Crisis,11,Agric,-0.333948628506196
+Global Financial Crisis,12,Hshld,-0.346703930011058
+Global Financial Crisis,13,Softw,-0.350660052702358
+Global Financial Crisis,14,Telcm,-0.372701830310307
+Global Financial Crisis,15,Oil,-0.382460541687986
+Global Financial Crisis,16,Hlth,-0.390762285104085
+Global Financial Crisis,17,Whlsl,-0.396184283056836
+Global Financial Crisis,18,Boxes,-0.400106543900223
+Global Financial Crisis,19,BusSv,-0.415953234961217
+Global Financial Crisis,20,MedEq,-0.419594334787967
+Global Financial Crisis,21,Guns,-0.435858494398016
+Global Financial Crisis,22,Hardw,-0.440312635378109
+Global Financial Crisis,23,Chips,-0.440398328047804
+Global Financial Crisis,24,Clths,-0.445421068842686
+Global Financial Crisis,25,LabEq,-0.447889537003987
+Global Financial Crisis,26,Aero,-0.453276335993046
+Global Financial Crisis,27,Toys,-0.464753885348033
+Global Financial Crisis,28,Paper,-0.469769267796179
+Global Financial Crisis,29,Trans,-0.47460030860126
+Global Financial Crisis,30,Cnstr,-0.494314818784695
+Global Financial Crisis,31,ElcEq,-0.50162823740083
+Global Financial Crisis,32,Fin,-0.517677939838314
+Global Financial Crisis,33,Other,-0.527353062150312
+Global Financial Crisis,34,Rubbr,-0.532053215942221
+Global Financial Crisis,35,Insur,-0.53811627383959
+Global Financial Crisis,36,Ships,-0.547625632374659
+Global Financial Crisis,37,Chems,-0.548741189400391
+Global Financial Crisis,38,Books,-0.563840154471017
+Global Financial Crisis,39,Mines,-0.566918677138145
+Global Financial Crisis,40,BldMt,-0.569370513757466
+Global Financial Crisis,41,Banks,-0.578416827102507
+Global Financial Crisis,42,Autos,-0.582602364712232
+Global Financial Crisis,43,Mach,-0.586646807347823
+Global Financial Crisis,44,Fun,-0.660451835892546
+Global Financial Crisis,45,RlEst,-0.671772945712307
+Global Financial Crisis,46,Steel,-0.676712933133546
+Global Financial Crisis,47,Txtls,-0.703960621064804
+Global Financial Crisis,48,FabPr,-0.711056226642882
+Global Financial Crisis,49,Coal,-0.7124648479382
+COVID sell-off,1,Gold,-0.0320945500000001
+COVID sell-off,2,Drugs,-0.0706551900000001
+COVID sell-off,3,Rtail,-0.1025865
+COVID sell-off,4,Smoke,-0.12708547
+COVID sell-off,5,Food,-0.13137118
+COVID sell-off,6,Softw,-0.14572032
+COVID sell-off,7,Hshld,-0.1463895
+COVID sell-off,8,LabEq,-0.15883608
+COVID sell-off,9,Boxes,-0.16227958
+COVID sell-off,10,Paper,-0.16473169
+COVID sell-off,11,Agric,-0.16616291
+COVID sell-off,12,Beer,-0.16732
+COVID sell-off,13,Rubbr,-0.1680202
+COVID sell-off,14,Chips,-0.16862085
+COVID sell-off,15,MedEq,-0.1821484
+COVID sell-off,16,Telcm,-0.18617716
+COVID sell-off,17,Hardw,-0.19314296
+COVID sell-off,18,Fun,-0.1938016
+COVID sell-off,19,Guns,-0.1950997
+COVID sell-off,20,Insur,-0.20542193
+COVID sell-off,21,Util,-0.21649355
+COVID sell-off,22,Mach,-0.21879532
+COVID sell-off,23,Other,-0.22128872
+COVID sell-off,24,Soda,-0.22383826
+COVID sell-off,25,Hlth,-0.22659142
+COVID sell-off,26,BusSv,-0.24001176
+COVID sell-off,27,Chems,-0.25418162
+COVID sell-off,28,Whlsl,-0.2546338
+COVID sell-off,29,Fin,-0.25674727
+COVID sell-off,30,Trans,-0.25894938
+COVID sell-off,31,Clths,-0.25984574
+COVID sell-off,32,ElcEq,-0.26208343
+COVID sell-off,33,Books,-0.2785591
+COVID sell-off,34,Autos,-0.28834375
+COVID sell-off,35,Mines,-0.28834776
+COVID sell-off,36,Meals,-0.29425144
+COVID sell-off,37,Steel,-0.30082384
+COVID sell-off,38,BldMt,-0.31871368
+COVID sell-off,39,Ships,-0.3192892
+COVID sell-off,40,Banks,-0.32676808
+COVID sell-off,41,Toys,-0.32734765
+COVID sell-off,42,PerSv,-0.329759
+COVID sell-off,43,Cnstr,-0.38030248
+COVID sell-off,44,FabPr,-0.4073674
+COVID sell-off,45,Txtls,-0.4123437
+COVID sell-off,46,RlEst,-0.4241971
+COVID sell-off,47,Aero,-0.4362598
+COVID sell-off,48,Oil,-0.44798855
+COVID sell-off,49,Coal,-0.46141573

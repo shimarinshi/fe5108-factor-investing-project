@@ -1,0 +1,4 @@
+strategy_code,strategy,in_sample_volatility,out_of_sample_volatility,change_percentage_points
+min_var_short,Minimum variance (shorting allowed),0.0758611197501668,0.167483140980535,9.16220212303679
+min_var_long_only,Minimum variance (long only),0.103155941023136,0.142873630726481,3.97176897033445
+inverse_volatility,Inverse volatility,0.139888761128386,0.172306233823981,3.24174726955951
