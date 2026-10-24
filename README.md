@@ -24,13 +24,13 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 ## What runs today
 
-`python run_all.py --all` verifies shared source files and reproduces all implemented analyses in dependency order. Part 2A–2D is complete; start with the [Part 2 report](reports/part_2/README.md) for methods, results and section navigation. Use `--list` to see available tasks.
+`python run_all.py --all` verifies shared source files and reproduces all implemented analyses in dependency order. Part 2A–2D and Part 3A–3E computations are integrated. Use `python run_all.py --part 3` for Part 3 only, or `--list` to see every registered task. The [Part 3 guide](src/part_3/README.md) documents methods, task dependencies and all 18 result files; its final group-report narrative remains pending.
 
 | Course area | Implementation status | Required inputs |
 |---|---|---|
-| Part 1: factor investing | Not implemented | Shared FF/MSCI workbook; Part 1 analysis pending |
+| Part 1: factor investing | Standalone handoff archive present; runner integration pending | Shared FF/MSCI workbook |
 | Part 2: security-level portfolios | Parts 2A–2D implemented | Shared security CSV and FF/MSCI workbook |
-| Part 3: industry portfolio optimization | Not implemented | Industry workbook and shared FF/MSCI workbook uploaded; extraction pending |
+| Part 3: industry portfolio optimization | 3A–3E computations integrated; final narrative pending | Existing industry workbook and shared FF/MSCI workbook |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
 
@@ -39,6 +39,8 @@ Add each new executable task to the ordered `TASKS` registry in `run_all.py`, up
 - [Shared input data](data/README.md)
 - [Reports by assignment part](reports/README.md)
 - [Part 2: security-level analysis](reports/part_2/README.md)
+- [Part 3: execution and methods](src/part_3/README.md)
+- [Part 3: result navigation](reports/part_3/README.md)
 
 Each part owns its report, code and output subdirectories. Section-specific methods and results belong inside that part, rather than on this team-wide page. Part 2 uses matching section folders under `reports/part_2/`, `src/part_2/` and `outputs/part_2/`. All implemented analyses remain accessible through the shared `run_all.py` entry point.
 
