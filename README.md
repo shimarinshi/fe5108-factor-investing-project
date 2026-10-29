@@ -24,7 +24,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 ## What runs today
 
-`python run_all.py --all` verifies shared source files and reproduces all implemented analyses in dependency order. Part 2A–2D, Part 3A–3E and Part 4 computations are integrated. Use `python run_all.py --part 4` to reproduce the Part 4 tables and figures. Use `python run_all.py --part 3` for Part 3 only, or `--list` to see every registered task. The [Part 3 guide](src/part_3/README.md) documents methods, task dependencies and all 18 result files; its final group-report narrative remains pending.
+`python run_all.py --all` verifies shared source files and reproduces all implemented analyses in dependency order. Part 2A–2D, Part 3A–3E and Parts 4 and 5 computations are integrated. Use `python run_all.py --part 5` to reproduce Part 5 tables and figures. Use `python run_all.py --part 4` to reproduce the Part 4 tables and figures. Use `python run_all.py --part 3` for Part 3 only, or `--list` to see every registered task. The [Part 3 guide](src/part_3/README.md) documents methods, task dependencies and all 18 result files; its final group-report narrative remains pending.
 
 | Course area | Implementation status | Required inputs |
 |---|---|---|
@@ -32,6 +32,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 | Part 2: security-level portfolios | Parts 2A–2D implemented | Shared security CSV and FF/MSCI workbook |
 | Part 3: industry portfolio optimization | 3A–3E computations integrated; final narrative pending | Existing industry workbook and shared FF/MSCI workbook |
 | Part 4: product innovation | Analysis and figures integrated; [report](reports/part4/README.md) | Instructor-provided NVDA/NVDL daily total returns, February–August 2024 |
+| Part 5: portfolio analytics | Numerical analysis and figures integrated; final report pending | Shared FF/MSCI workbook |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
 

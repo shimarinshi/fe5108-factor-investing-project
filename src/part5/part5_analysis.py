@@ -84,7 +84,7 @@ def run(workbook, output):
     panel["Replication_residual"]=df.Value-df.Replication
     panel.index=panel.index.astype(str); panel.index.name="month"
     panel.to_csv(out/"monthly_panel.csv",float_format="%.12g",lineterminator="\n")
-    (out/"diagnostics.json").write_text(json.dumps({"months":len(df),"start":START,"end":END,"regression_r2":r2,"replication_correlation":corr,"alpha_monthly":float(coef[0]),"alpha_annual_arithmetic":float(coef[0]*12),"monthly_active_variance":float(variance_m),"decomposition_sum":float(contrib.sum()),"workbook_sha256":hashlib.sha256(Path(workbook).read_bytes()).hexdigest()},indent=2)+"\n",encoding="utf-8")
+    (out/"diagnostics.json").write_text(json.dumps({"months":len(df),"start":START,"end":END,"regression_r2":r2,"replication_correlation":corr,"alpha_monthly":float(coef[0]),"alpha_annual_arithmetic":float(coef[0]*12),"monthly_active_variance":float(variance_m),"decomposition_sum":float(contrib.sum()),"workbook_sha256":hashlib.sha256(Path(workbook).read_bytes()).hexdigest()},indent=2)+"\n",encoding="utf-8",newline="\n")
     plt.rcParams.update({"font.family":"DejaVu Sans","axes.titlecolor":"#213444","axes.labelcolor":"#213444"})
     fig,ax=plt.subplots(figsize=(9,4.8))
     for col,label,color in [("Value","MSCI USA Value","#246B83"),("Replication","Factor replication","#BD503B")]:
