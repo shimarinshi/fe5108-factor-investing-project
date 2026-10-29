@@ -30,6 +30,9 @@ class Part4IntegrationTests(unittest.TestCase):
             run_all.TASKS["part4_analysis"](root)
             run_all.TASKS["part4_figures"](root)
             out = root / "outputs/part4"
+            for name in ("daily_returns.csv", "daily_risk.csv", "regression.csv",
+                         "cumulative_returns.csv", "two_day_example.csv"):
+                self.assertNotIn(b"\r\n", (out / name).read_bytes())
             daily = pd.read_csv(out / "daily_returns.csv")
             regression = pd.read_csv(out / "regression.csv").set_index("coefficient")
             returns = pd.read_csv(out / "cumulative_returns.csv").set_index("period")

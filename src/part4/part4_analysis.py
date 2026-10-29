@@ -23,7 +23,7 @@ def run(input_path, out):
         raise ValueError("Unexpected missing, duplicate, or incomplete observations")
     if not np.isfinite(df[["NVDA","NVDL"]].to_numpy()).all() or (df[["NVDA","NVDL"]] <= -1).any().any():
         raise ValueError("Invalid daily return")
-    df.to_csv(out/"daily_returns.csv", index=False, date_format="%Y-%m-%d", float_format="%.12g")
+    df.to_csv(out/"daily_returns.csv", index=False, date_format="%Y-%m-%d", float_format="%.12g",lineterminator="\n")
     risks=[]
     for name in ["NVDA","NVDL"]:
         x=df[name].to_numpy()
@@ -32,7 +32,7 @@ def run(input_path, out):
                       "return_5th_percentile":q,"var_95_loss":-q,
                       "cvar_95_loss":-np.mean(x[x<=q]),"tail_observations":int(sum(x<=q))})
     risk=pd.DataFrame(risks)
-    risk.to_csv(out/"daily_risk.csv",index=False,float_format="%.12g")
+    risk.to_csv(out/"daily_risk.csv",index=False,float_format="%.12g",lineterminator="\n")
     x=df.NVDA.to_numpy(); y=df.NVDL.to_numpy()
     fit=stats.linregress(x,y)
     X=np.column_stack([np.ones(len(x)),x])
@@ -43,16 +43,16 @@ def run(input_path, out):
     reg=pd.DataFrame({"coefficient":["intercept","NVDA_slope"],"estimate":coef,"standard_error":se,
                       "ci_95_lower":coef-critical*se,"ci_95_upper":coef+critical*se,
                       "t_stat":coef/se})
-    reg.to_csv(out/"regression.csv",index=False,float_format="%.12g")
+    reg.to_csv(out/"regression.csv",index=False,float_format="%.12g",lineterminator="\n")
     sums=[]
     for label,g in list(df.groupby(df.date.dt.strftime("%Y-%m"),sort=True))+[("2024-02_to_2024-08",df)]:
         a=np.prod(1+g.NVDA.to_numpy())-1
         b=np.prod(1+g.NVDL.to_numpy())-1
         sums.append({"period":label,"days":len(g),"NVDA":a,"NVDL":b,"twice_NVDA":2*a,"difference_from_twice":b-2*a})
-    pd.DataFrame(sums).to_csv(out/"cumulative_returns.csv",index=False,float_format="%.12g")
+    pd.DataFrame(sums).to_csv(out/"cumulative_returns.csv",index=False,float_format="%.12g",lineterminator="\n")
     examples=pd.DataFrame([{"asset":"NVDA","day_1":.10,"day_2":-.09,"two_day_return":1.1*.91-1},
                            {"asset":"NVDL_ideal_2x","day_1":.20,"day_2":-.18,"two_day_return":1.2*.82-1}])
-    examples.to_csv(out/"two_day_example.csv",index=False,float_format="%.12g")
+    examples.to_csv(out/"two_day_example.csv",index=False,float_format="%.12g",lineterminator="\n")
     fig,ax=plt.subplots(figsize=(9,4.5))
     for name,color in [("NVDA","#246B83"),("NVDL","#BD503B")]:
         wealth=np.r_[1,(1+df[name]).cumprod().to_numpy()]
