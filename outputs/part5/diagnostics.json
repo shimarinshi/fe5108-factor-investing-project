@@ -1,0 +1,12 @@
+{
+  "months": 343,
+  "start": "1995-01",
+  "end": "2023-07",
+  "regression_r2": 0.948414224732985,
+  "replication_correlation": 0.9738656091745838,
+  "alpha_monthly": -0.0007128052418360457,
+  "alpha_annual_arithmetic": -0.00855366290203255,
+  "monthly_active_variance": 9.558134087859056e-05,
+  "decomposition_sum": 9.558134087859056e-05,
+  "workbook_sha256": "15a7873363b56cc83bdd94a3d3e0daae2ab3acc00cc1a68f7c983c6ef36cc827"
+}
