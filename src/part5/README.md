@@ -6,4 +6,4 @@ From the repository root, use `python run_all.py --part 5`; `--all` also runs bo
 
 Results under `outputs/part5/` include the aligned monthly panel, factor regression, replication metrics, active-performance and risk-decomposition tables, per-component active metrics, diagnostics and five figures. Annualized arithmetic returns are 12 times monthly mean; volatility and tracking error are sample monthly standard deviation times sqrt(12). The replication is fitted and evaluated on the same sample and excludes costs. See the script for the exact input checks and formulas.
 
-`tests/test_part5_integration.py` regenerates the outputs in a temporary directory, compares numerical CSVs with committed references using tolerance, checks images and verifies task isolation. Part 5's final narrative report is not yet in the repository.
+`tests/test_part5_integration.py` regenerates the outputs in a temporary directory, compares numerical CSVs with committed references using tolerance, checks images and verifies task isolation. The [Part 5 report](../../reports/part5/README.md) explains the methods, results and limitations.
