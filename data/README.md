@@ -1,14 +1,19 @@
 # Shared data registry — read before adding or uploading data
 
-**All three supplied course datasets are already committed. Every part should reuse these canonical files; do not upload another copy under a part, notebook, contributor or output folder.** The original filenames and exact-byte SHA-256 hashes are recorded in [the source manifest](raw/source_manifest.json). File labels identify their source, not exclusive ownership by a part.
+**All four supplied course datasets are already committed. Every part should reuse these canonical files; do not upload another copy under a part, notebook, contributor or output folder.** The original filenames and exact-byte SHA-256 hashes are recorded in [the source manifest](raw/source_manifest.json). File labels identify their source, not exclusive ownership by a part.
 
 | Canonical path (from repository root) | Contents | Availability |
 |---|---|---|
 | `data/raw/ff_msci_shared.xlsx` | FF beta-sorted portfolios, momentum-sorted portfolios, three-factor returns, and MSCI factor total-return index sheets; source labeled parts 1 and 5 | Uploaded; shared by all analyses that need these series |
 | `data/raw/security_characteristics.csv` | Anonymized security-level characteristics and forward monthly returns; source labeled part 2 | Uploaded previously; reused without a second copy |
+| `data/raw/product_innovation.xlsx` | NVDA and NVDL daily total returns; source labeled part 4 (product innovation) | Uploaded; shared original workbook |
 | `data/raw/industry_portfolios.xlsx` | `49_Industry_Portfolios` worksheet; source labeled part 3 | Uploaded; shared by all analyses that need industry returns |
 
 Workbook bytes and sheet names are unchanged. These are source files, not standardized analysis tables. Check headers, units, missing sentinels, dates and value/equal weighting before extracting a sheet; a matching file hash is not economic validation. The parts 1/5 filename does not imply that Part 5 requirements have been released or implemented.
+
+## Part 4 workbook inventory
+
+`product_innovation.xlsx` preserves the instructor file byte-for-byte, including sheet `NVDL`. Row 3 labels the series "daily total returns"; row 5 identifies columns B/C as NVDA/NVDL, with dates in column A. There are 147 dated observations from February 1 to August 30, 2024, in descending date order. Returns are stored as decimal fractions (0.01 = 1%). Trailing blank/formatted rows are not observations. Reuse the supplied total returns directly; do not calculate percentage changes of these return fields. This is source registration only; Part 4 analysis and independent validation of the provider's return construction remain pending.
 
 ## Before every data-related commit or push
 

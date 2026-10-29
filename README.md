@@ -20,7 +20,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 ## Shared course data — already uploaded
 
-**Before adding data or preparing a push, read [data/README.md](data/README.md).** The shared FF/MSCI workbook, security-level CSV and 49-industry workbook are already in `data/raw/`. Reuse them across parts; do not upload separate copies. New common data must follow the same registry process. Part-specific intermediate tables may be committed with their generating code.
+**Before adding data or preparing a push, read [data/README.md](data/README.md).** The shared FF/MSCI workbook, security-level CSV, 49-industry workbook and Part 4 product-innovation workbook are in `data/raw/`. Reuse them across parts; do not upload separate copies. New common data must follow the same registry process. Part-specific intermediate tables may be committed with their generating code.
 
 ## What runs today
 
@@ -31,6 +31,7 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 | Part 1: factor investing | Standalone handoff archive present; runner integration pending | Shared FF/MSCI workbook |
 | Part 2: security-level portfolios | Parts 2A–2D implemented | Shared security CSV and FF/MSCI workbook |
 | Part 3: industry portfolio optimization | 3A–3E computations integrated; final narrative pending | Existing industry workbook and shared FF/MSCI workbook |
+| Part 4: product innovation | Source data uploaded; analysis pending | Instructor-provided NVDA/NVDL daily total returns, February–August 2024 |
 
 Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
 

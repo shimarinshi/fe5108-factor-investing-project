@@ -27,6 +27,13 @@
       "sha256": "7e451fdea86bf3fa717b94f840247725601e7081749b5c172bd4c047cef09933",
       "source": "Instructor-provided shared course data",
       "received_date": "2026-10-20"
+    },
+    {
+      "original_filename": "class project data (part 4 - product innovation).xlsx",
+      "path": "data/raw/product_innovation.xlsx",
+      "sha256": "e3509705eb0295f3ff96924ac39db5894c063b4a23c74768154e4062ace44e06",
+      "source": "Instructor-provided course data; Part 4 product innovation",
+      "received_date": "2026-10-29"
     }
   ]
 }
