@@ -1,6 +1,6 @@
 # Part 4: Product innovation — NVDA and NVDL
 
-Source: [instructor-supplied product_innovation.xlsx](../../data/raw/product_innovation.xlsx), NVDL sheet. The sample contains 147 paired daily total returns from February 1 through August 30, 2024. Values in the source and CSVs are decimal returns; the report presents percentages where indicated. The supplier's return construction has not been independently verified. The results are historical, and the Part 4 scripts are not yet integrated into the project runner.
+Source: [instructor-supplied product_innovation.xlsx](../../data/raw/product_innovation.xlsx), NVDL sheet. The sample contains 147 paired daily total returns from February 1 through August 30, 2024. Values in the source and CSVs are decimal returns; the report presents percentages where indicated. The supplier's return construction has not been independently verified. The results are historical.
 
 ## 4A — daily risk
 
@@ -65,8 +65,7 @@ The [output directory](../../outputs/part4/) contains the daily return panel, da
 From the repository root, after installing the documented Python dependencies:
 
 ```sh
-python src/part4/part4_analysis.py --input data/raw/product_innovation.xlsx --output outputs/part4
-python src/part4/part4_figures.py --output outputs/part4
+python run_all.py --part 4
 ```
 
-The scripts were run locally and the regression, compounding and volatility were independently checked. They have not yet been integrated into `run_all.py` or tested using the repository's pinned environment. Figures and results should be regenerated together if the analysis changes.
+The runner validates shared inputs and then generates the analysis tables followed by the figures. `python run_all.py --all` also includes Part 4. Figures and results should be regenerated together if the analysis changes.

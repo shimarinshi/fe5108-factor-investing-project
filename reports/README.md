@@ -7,5 +7,6 @@ Reports are organized by assignment part, then by section. Each section has one 
 | Part 1: factor investing | Not yet added | Pending |
 | Part 2: security-level analysis | [Part 2](part_2/README.md) | 2A–2D complete |
 | Part 3: portfolio construction | Not yet added | Pending |
+| Part 4: product innovation | [Part 4](part4/README.md) | Report and analysis |
 
 [Project overview](../README.md)

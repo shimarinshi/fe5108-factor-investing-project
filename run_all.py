@@ -23,6 +23,14 @@ from src.part_3.in_sample_effectiveness import run as part3_in_sample_effectiven
 from src.part_3.out_of_sample_effectiveness import run as part3_out_of_sample_effectiveness
 from src.part_3.reoptimization import run as part3_reoptimization
 from src.part_3.performance_expectations import run as part3_performance_expectations
+from src.part4.part4_analysis import run as part4_analyze
+from src.part4.part4_figures import run as part4_plot
+
+def part4_analysis(root):
+    part4_analyze(root / 'data/raw/product_innovation.xlsx', root / 'outputs/part4')
+
+def part4_figures(root):
+    part4_plot(root / 'outputs/part4')
 
 ROOT = Path(__file__).resolve().parent
 TASKS = {'validate_inputs': validate_inputs, 'monthly_stock_coverage': monthly_stock_coverage,
@@ -33,11 +41,14 @@ TASKS = {'validate_inputs': validate_inputs, 'monthly_stock_coverage': monthly_s
          'part3_in_sample_effectiveness': part3_in_sample_effectiveness,
          'part3_out_of_sample_effectiveness': part3_out_of_sample_effectiveness,
          'part3_reoptimization': part3_reoptimization,
-         'part3_performance_expectations': part3_performance_expectations}
+         'part3_performance_expectations': part3_performance_expectations,
+         'part4_analysis': part4_analysis,
+         'part4_figures': part4_figures}
 
 PART_TASKS = {
-    '2': tuple(name for name in TASKS if not name.startswith('part3_')),
+    '2': tuple(name for name in TASKS if not name.startswith(('part3_', 'part4_'))),
     '3': ('validate_inputs',) + tuple(name for name in TASKS if name.startswith('part3_')),
+    '4': ('validate_inputs', 'part4_analysis', 'part4_figures'),
 }
 
 def main():
