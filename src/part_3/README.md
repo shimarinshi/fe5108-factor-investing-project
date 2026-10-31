@@ -1,6 +1,6 @@
 # Part 3: reproducible industry-portfolio analysis
 
-The numerical analysis and figures for 3A–3E are integrated. The final group-report narrative is intentionally pending. The original `part 3.ipynb` is retained as the working record; `industry_portfolio_analysis.ipynb` calls the Python modules below instead of maintaining a second implementation.
+The numerical analysis and figures for 3A–3E are integrated. See the [results overview](../../reports/part_3/README.md) for comparisons and interpretation. `industry_portfolio_analysis.ipynb` calls the Python modules below instead of maintaining a second implementation.
 
 ## Setup and execution
 
@@ -17,7 +17,7 @@ python -m unittest discover -s tests -v
 
 On Windows, activate with `.venv\Scripts\Activate.ps1`. Notebook front-end tooling (VS Code Jupyter/IPython) is separate from the command-line runtime; the core modules do not import IPython. Select the environment containing the locked runtime packages when using the notebook.
 
-`python run_all.py --all` reproduces both integrated Parts 2 and 3. `python run_all.py --list` lists every task. After environment installation, the analyses run offline without API keys.
+`python run_all.py --all` reproduces integrated Parts 2–5. `python run_all.py --list` lists every task. After environment installation, the analyses run offline without API keys.
 
 | Question | Python module | Registered task | Required upstream result |
 |---|---|---|---|

@@ -9,11 +9,11 @@
 | `data/raw/product_innovation.xlsx` | NVDA and NVDL daily total returns; source labeled part 4 (product innovation) | Uploaded; shared original workbook |
 | `data/raw/industry_portfolios.xlsx` | `49_Industry_Portfolios` worksheet; source labeled part 3 | Uploaded; shared by all analyses that need industry returns |
 
-Workbook bytes and sheet names are unchanged. These are source files, not standardized analysis tables. Check headers, units, missing sentinels, dates and value/equal weighting before extracting a sheet; a matching file hash is not economic validation. The parts 1/5 filename does not imply that Part 5 requirements have been released or implemented.
+Workbook bytes and sheet names are unchanged. These are source files, not standardized analysis tables. Check headers, units, missing sentinels, dates and value/equal weighting before extracting a sheet; a matching file hash is not economic validation. Parts 1 and 5 both use the shared FF/MSCI workbook; their analysis windows and methods are documented in their reports.
 
 ## Part 4 workbook inventory
 
-`product_innovation.xlsx` preserves the instructor file byte-for-byte, including sheet `NVDL`. Row 3 labels the series "daily total returns"; row 5 identifies columns B/C as NVDA/NVDL, with dates in column A. There are 147 dated observations from February 1 to August 30, 2024, in descending date order. Returns are stored as decimal fractions (0.01 = 1%). Trailing blank/formatted rows are not observations. Reuse the supplied total returns directly; do not calculate percentage changes of these return fields. This is source registration only; Part 4 analysis and independent validation of the provider's return construction remain pending.
+`product_innovation.xlsx` preserves the instructor file byte-for-byte, including sheet `NVDL`. Row 3 labels the series "daily total returns"; row 5 identifies columns B/C as NVDA/NVDL, with dates in column A. There are 147 dated observations from February 1 to August 30, 2024, in descending date order. Returns are stored as decimal fractions (0.01 = 1%). Trailing blank/formatted rows are not observations. Reuse the supplied total returns directly; do not calculate percentage changes of these return fields. The [Part 4 report](../reports/part4/README.md) documents the implemented analysis. The provider's underlying return construction has not been independently verified.
 
 ## Before every data-related commit or push
 
@@ -25,7 +25,7 @@ Workbook bytes and sheet names are unchanged. These are source files, not standa
 
 ## Intermediate and result tables
 
-Part-specific intermediate tables and results may be committed under descriptive analysis directories such as `outputs/value_portfolios/` or `data/processed/value_portfolios/`, together with the generating code and documented input/output paths. These directories are ignored by default: selectively add intended deliverables with `git add -f <specific-file>`, not an entire output tree. Raw-data copies are not intermediate products.
+Part-specific intermediate tables and results may be committed under descriptive analysis directories such as `outputs/part_2/value_portfolios/`, together with the generating code and documented input/output paths. These directories are ignored by default: selectively add intended deliverables with `git add -f <specific-file>`, not an entire output tree. Raw-data copies are not intermediate products.
 
 If a derived table becomes useful to multiple parts, promote it to a documented shared path under `data/processed/`, specify its schema and generating task, and register it here under shared derived datasets. Reuse that path instead of maintaining separate competing versions.
 

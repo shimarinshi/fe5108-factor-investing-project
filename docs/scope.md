@@ -1,11 +1,17 @@
-# Released scope and open decisions
+# Delivered scope and remaining integration limits
 
-The retained post-class-3 handout releases Parts 1–3. No later requirements or team roles are inferred.
+Reports and results are available for Parts 1–5. The archived post-class-3 handout covers Parts 1–3. Later question sheets have not been added, so repository checks cannot establish complete compliance with the original Part 4–5 wording.
 
-Part 2A now covers all five bullets: monthly stock counts, raw-return distributions and monthly P1/P99 winsorization, return coverage, standardized P/B concentration, and rank-based valuation sanity checks. Raw shared sources are unchanged. Code is registered in run_all.py; figures, tables and English report sections document the methods and findings.
+| Part | Delivered scope | Execution |
+|---|---|---|
+| 1 | Factor-premium tests, MSCI methodology discussion, diversification, construction comparisons and volatility sensitivity | Standalone archive; readable report and figures exposed separately |
+| 2 | 2A data diagnostics, 2B market proxy, 2C value portfolios and 2D active-return analysis | Shared runner |
+| 3 | 3A optimization, 3B in-sample risk, 3C out-of-sample risk, 3D reoptimization and 3E crisis comparisons | Shared runner |
+| 4 | NVDA/NVDL daily risk, leverage regression, compounding and product discussion | Shared runner |
+| 5 | Value replication, multi-factor active performance and risk decomposition | Shared runner |
 
-For subsequent value portfolios, exclude Pb = 0.50 stock-months in the baseline and include them in a robustness comparison. This does not establish negative book equity. Part 2B is implemented: monthly market-cap-score weights, winsorized forward returns, and an aligned MSCI USA gross USD comparison for 1999–2018. Pb = 0.50 stocks remain in this broad-market proxy. Part 2C annualized returns, volatility and final-period holdings comparisons are implemented, including a Pb = 0.50 inclusion sensitivity check. Part 2D tracking error and active-return/HML correlations are implemented.
+Part 1 is not integrated into `run_all.py`; its archive retains the original standalone scripts and supplementary tables. Readable reports do not imply shared-runner integration. The final combined submission is separate from these part-level reports.
 
-Part 1 has a standalone handoff archive but is not registered in the shared runner. Part 3 computations for 3A–3E are integrated via five `run(root)` tasks and `--part 3`. The original notebook is retained; the module-backed notebook is the reproducible front end. Part 3's final report narrative is intentionally deferred. The implementation preserves the original notebook's 13 numerical result tables and adds deterministic presentation output, dependency declarations, task documentation and regression checks. No later assignment parts are inferred.
+Part 2 uses monthly P1/P99 winsorized returns. Its broad-market proxy retains Pb = 0.50 observations; value portfolios exclude them in the baseline and include them in a sensitivity comparison. The P/B concentration does not establish negative book equity. Source workbooks and CSVs remain unchanged.
 
-The instructor's Part 4 product-innovation workbook was received on October 29, 2026 and is registered at `data/raw/product_innovation.xlsx`. It contains 147 daily total-return observations for NVDA and NVDL (February 1–August 30, 2024). The Part 4 question sheet has not been added; no analysis requirements or completed analysis are inferred from this data upload.
+Part 4 uses instructor-supplied daily total returns. The report distinguishes estimated leverage drag from the stated management fee and notes that the historical factsheet has not been independently checked. See each part's report for assumptions, sample windows and limitations.

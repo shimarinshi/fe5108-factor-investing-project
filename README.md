@@ -2,7 +2,7 @@
 
 Shared workspace for the Fall 2026 practitioner-segment class project. This is independent of the earlier portfolio-theory project. Repository documentation and code use English.
 
-The assignment is released incrementally. The supplied post-class-3 handout describes Parts 1–3; future work is not invented or assigned here. No team responsibilities are prescribed.
+Reports and results for Parts 1–5 are available below. The retained assignment handout covers Parts 1–3; later question sheets are not yet archived in this repository.
 
 ## Quick start
 
@@ -22,31 +22,30 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 **Before adding data or preparing a push, read [data/README.md](data/README.md).** The shared FF/MSCI workbook, security-level CSV, 49-industry workbook and Part 4 product-innovation workbook are in `data/raw/`. Reuse them across parts; do not upload separate copies. New common data must follow the same registry process. Part-specific intermediate tables may be committed with their generating code.
 
-## What runs today
+## Reports and reproduction
 
-`python run_all.py --all` verifies shared source files and reproduces all implemented analyses in dependency order. Part 2A–2D, Part 3A–3E and Parts 4 and 5 computations are integrated. Use `python run_all.py --part 5` to reproduce Part 5 tables and figures. Use `python run_all.py --part 4` to reproduce the Part 4 tables and figures. Use `python run_all.py --part 3` for Part 3 only, or `--list` to see every registered task. The [Part 3 guide](src/part_3/README.md) documents methods, task dependencies and all 18 result files; its final group-report narrative remains pending.
-
-| Course area | Implementation status | Required inputs |
+| Part | Report | Reproduction |
 |---|---|---|
-| Part 1: factor investing | Standalone handoff archive present; runner integration pending | Shared FF/MSCI workbook |
-| Part 2: security-level portfolios | Parts 2A–2D implemented | Shared security CSV and FF/MSCI workbook |
-| Part 3: industry portfolio optimization | 3A–3E computations integrated; final narrative pending | Existing industry workbook and shared FF/MSCI workbook |
-| Part 4: product innovation | Analysis and figures integrated; [report](reports/part4/README.md) | Instructor-provided NVDA/NVDL daily total returns, February–August 2024 |
-| Part 5: portfolio analytics | Analysis and figures integrated; [report](reports/part5/README.md) | Shared FF/MSCI workbook |
+| 1: factor investing | [Part 1](reports/part_1/README.md) | Standalone delivery archive; not in the shared runner |
+| 2: security-level portfolios | [Part 2A–2D](reports/part_2/README.md) | `python run_all.py --part 2` |
+| 3: industry portfolio optimization | [Part 3A–3E](reports/part_3/README.md) | `python run_all.py --part 3` |
+| 4: product innovation | [Part 4](reports/part4/README.md) | `python run_all.py --part 4` |
+| 5: portfolio analytics | [Part 5](reports/part5/README.md) | `python run_all.py --part 5` |
 
-Add each new executable task to the ordered `TASKS` registry in `run_all.py`, update this table and document inputs, outputs and dependencies. `--all` must cover every integrated analysis. Never present an isolated uploaded folder as completed integration.
+`python run_all.py --all` verifies the shared sources and reproduces integrated Parts 2–5 in dependency order. Use `--list` to see registered tasks. Part 1's original scripts and supplementary tables remain in its delivery archive; `--all` does not rerun them.
 
-## Project navigation
+Each part owns its report, code and output directories. Existing names (`part_2`, `part_3`, `part4`, `part5`) are retained so teammates' scripts and links continue to work. See the [report index](reports/README.md), [output index](outputs/README.md) and [Part 3 execution guide](src/part_3/README.md).
 
-- [Shared input data](data/README.md)
-- [Reports by assignment part](reports/README.md)
-- [Part 2: security-level analysis](reports/part_2/README.md)
-- [Part 3: execution and methods](src/part_3/README.md)
-- [Part 3: result navigation](reports/part_3/README.md)
-- [Part 4: product innovation](reports/part4/README.md)
-- [Part 5: portfolio analytics](reports/part5/README.md)
+## Reading results across parts
 
-Each part owns its report, code and output subdirectories. Section-specific methods and results belong inside that part, rather than on this team-wide page. Part 2 uses matching section folders under `reports/part_2/`, `src/part_2/` and `outputs/part_2/`. All implemented analyses remain accessible through the shared `run_all.py` entry point.
+| Analysis | Return sample | Main reporting convention |
+|---|---|---|
+| Part 1 MSCI comparisons and Part 5 | January 1995–July 2023 | Arithmetic annualized mean; Part 1 also gives CAGR |
+| Part 2 portfolio performance | January 1999–December 2018 | Geometric annualized return (CAGR) |
+| Part 3 | Estimation and evaluation windows vary by question | Monthly sample volatility × √12 |
+| Part 4 | February 1–August 30, 2024 | Daily total returns, daily risk and compounded holding-period returns |
+
+Part 1's historical factor tests use longer samples specified in its report. Different windows and return averages are intentional: compare strategies within the same question before comparing headline results across parts.
 
 ## Layout
 
