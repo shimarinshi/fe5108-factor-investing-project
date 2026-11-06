@@ -1,0 +1,12 @@
+﻿metric,value
+mean_constituent_vol_and_perfect_positive_correlation_reference,0.15208173461
+multifactor_vol_annual,0.144014009572
+vol_reduction_absolute,0.00806772503843
+vol_reduction_relative,0.0530486127023
+portfolio_variance_annual,0.0207400349529
+diagonal_variance_component,0.00587408556063
+off_diagonal_covariance_component,0.0148659493923
+perfect_positive_correlation_variance_reference,0.023128854002
+variance_reduction_relative,0.103283070095
+minimum_pairwise_total_return_correlation,0.782603103146
+maximum_pairwise_total_return_correlation,0.951060137484

@@ -32,3 +32,10 @@ If a derived table becomes useful to multiple parts, promote it to a documented 
 ## Shared derived datasets
 
 - `data/processed/security_returns/winsorized_returns.csv`: produced by `return_distribution` in `run_all.py` from the canonical security CSV. One row per `stock_id, formation_month`; columns: `stock_id`, `formation_month`, `return_month` (YYYY-MM), `raw_return`, `winsorized_return` (decimal returns), `was_winsorized` (boolean). No rows dropped. Raw returns are retained; monthly P1/P99 caps use linear interpolation. Available for subsequent Part 2 portfolio tasks. Missing returns remain blank.
+
+## Assignment handouts
+
+- [Complete assignment, Parts 1–5](../inputs/class_project_in_full.pdf), received November 6, 2026.
+- [Earlier post-class-3 release](../inputs/class_project_post_class_3.pdf), retained for provenance.
+
+Both are unchanged instructor PDFs with hashes in the source manifest. The complete handout requires the Part 3A optimization code in the report appendix and limits main text to eight pages, excluding exhibits and the requested code appendix. The final report includes References within those eight pages.

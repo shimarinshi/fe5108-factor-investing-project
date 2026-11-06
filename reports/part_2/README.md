@@ -1,6 +1,6 @@
 # Part 2: security-level portfolios
 
-Parts 2A–2D are complete for the post-class-3 assignment. Read the sections in order: data validation establishes the cleaning rules, the market portfolio supplies the benchmark, and the value portfolios are compared both on their own and relative to that benchmark.
+Parts 2A–2D are complete. The [final report](../final_report/FE5108_Final_Project_Report.pdf) contains the submission text. Read the sections in order: data validation establishes the cleaning rules, the market portfolio supplies the benchmark, and the value portfolios are compared both on their own and relative to that benchmark.
 
 ## Report navigation
 
@@ -24,11 +24,11 @@ Parts 2A–2D are complete for the post-class-3 assignment. Read the sections in
 From the repository root, use the documented Python environment and run:
 
 ```bash
-python run_all.py --all
+python run_all.py --part 2
 python -m unittest discover -s tests -v
 ```
 
-`--all` runs input validation, the five 2A diagnostics, `market_portfolio`, `benchmark_comparison`, `value_returns`, `tracking_error`, and `factor_correlations` in dependency order. Individual `--task` commands require their upstream files to exist; each section documents its commands.
+`--part 2` runs input validation, the five 2A diagnostics, `market_portfolio`, `benchmark_comparison`, `value_returns`, `tracking_error`, and `factor_correlations` in dependency order. Individual `--task` commands require their upstream files to exist; each section documents its commands.
 
 Reports, code and outputs use the same four section names: `data_validation`, `broad_market`, `value_portfolios`, and `active_returns`, under `reports/part_2/`, `src/part_2/`, and `outputs/part_2/`. Figures appear inline in the relevant reports; numerical tables are saved alongside their figures. Selected figures and tables are versioned for review. Large security-weight panels and SVG exports are generated locally.
 

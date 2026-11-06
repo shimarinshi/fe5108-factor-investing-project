@@ -166,7 +166,7 @@ Formation months December 1998–November 2018 produce 240 monthly returns for J
 
 Annualized return is geometric: [product of (1 + monthly return)]^(12/240) − 1. The chart starts at $1 on December 31, 1998 and compounds the same monthly returns.
 
-**{LABELS[winner]} has the highest annualized return.** One possible explanation is that it concentrates entirely on the cheapest stocks, whereas the other methods still allocate capital to relatively more expensive stocks, potentially diluting the value tilt. Equal weighting also avoids giving larger stocks additional weight within the selected group. This comparison does not isolate the effect of equal weighting from that of stock selection. Comparisons with the market also reflect the different treatment of Pb = 0.50.
+**{LABELS[winner]} has the highest annualized return.** The top-20% strategy invests only in the cheapest stocks, whereas the other two strategies also allocate weight to relatively more expensive stocks, diluting their value exposure. Equal weighting avoids giving larger stocks additional weight within the selected group. These features may help explain its higher return and volatility, although this comparison cannot separate the effects of stock selection and weighting. Comparisons with the market also reflect the different treatment of Pb = 0.50.
 
 As a sensitivity check, retaining Pb = 0.50 gives annualized returns of {robustness_metrics[0][1]:.2%}, {robustness_metrics[1][1]:.2%} and {robustness_metrics[2][1]:.2%}, respectively. These observations remain of uncertain interpretation; this check does not validate their P/B values.
 

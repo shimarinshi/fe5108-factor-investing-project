@@ -1,0 +1,5 @@
+﻿sheet,excel_rows,start,end,months,missing,duplicates,source_units
+FF - 3 factor returns,5:1169,1926-07,2023-07,1165,0,0,percent; divide by 100
+FF - portfolios sorted on pmom,12:1170,1927-01,2023-07,1159,0,0,percent; divide by 100
+FF - portfolios sorted on beta,17:737,1963-07,2023-07,721,0,0,percent; divide by 100
+MSCI - factor totret index,8:351,1994-12,2023-07,344,0,0,USD Gross total return index levels; numeric text

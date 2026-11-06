@@ -34,6 +34,13 @@
       "sha256": "e3509705eb0295f3ff96924ac39db5894c063b4a23c74768154e4062ace44e06",
       "source": "Instructor-provided course data; Part 4 product innovation",
       "received_date": "2026-10-29"
+    },
+    {
+      "original_filename": "class project (fall 2026) (in full).pdf",
+      "path": "inputs/class_project_in_full.pdf",
+      "sha256": "c0b8357883e5ab1800d3de9ad852e8eddaaed0236f2f695dfc8a47529807feb5",
+      "source": "Instructor-provided complete course assignment, Parts 1\u20135",
+      "received_date": "2026-11-06"
     }
   ]
 }

@@ -2,7 +2,11 @@
 
 Shared workspace for the Fall 2026 practitioner-segment class project. This is independent of the earlier portfolio-theory project. Repository documentation and code use English.
 
-Reports and results for Parts 1–5 are available below. The retained assignment handout covers Parts 1–3; later question sheets are not yet archived in this repository.
+## Final report
+
+[Read the final project report](reports/final_report/FE5108_Final_Project_Report.pdf) — eight pages of main text including References, followed by the exhibits and required Part 3 code appendix. [Report details and team contributions](reports/final_report/README.md).
+
+The [complete assignment](inputs/class_project_in_full.pdf) covers Parts 1–5. Earlier handout snapshots are retained. This repository is public; the PDF's GitHub links can be opened without repository membership.
 
 ## Quick start
 
@@ -26,13 +30,13 @@ On Windows, activate with `.venv\Scripts\Activate.ps1`. Run commands from the re
 
 | Part | Report | Reproduction |
 |---|---|---|
-| 1: factor investing | [Part 1](reports/part_1/README.md) | Standalone delivery archive; not in the shared runner |
+| 1: factor investing | [Part 1](reports/part_1/README.md) | `python src/part_1/build_part1.py` (separate from the shared runner) |
 | 2: security-level portfolios | [Part 2A–2D](reports/part_2/README.md) | `python run_all.py --part 2` |
 | 3: industry portfolio optimization | [Part 3A–3E](reports/part_3/README.md) | `python run_all.py --part 3` |
 | 4: product innovation | [Part 4](reports/part4/README.md) | `python run_all.py --part 4` |
 | 5: portfolio analytics | [Part 5](reports/part5/README.md) | `python run_all.py --part 5` |
 
-`python run_all.py --all` verifies the shared sources and reproduces integrated Parts 2–5 in dependency order. Use `--list` to see registered tasks. Part 1's original scripts and supplementary tables remain in its delivery archive; `--all` does not rerun them.
+`python run_all.py --all` verifies the shared sources and reproduces integrated Parts 2–5 in dependency order. Use `--list` to see registered tasks. Run Part 1 separately with the command above; see its [execution guide](src/part_1/README.md) and [tables](outputs/part_1/tables/). `--all` does not rerun Part 1.
 
 Each part owns its report, code and output directories. Existing names (`part_2`, `part_3`, `part4`, `part5`) are retained so teammates' scripts and links continue to work. See the [report index](reports/README.md), [output index](outputs/README.md) and [Part 3 execution guide](src/part_3/README.md).
 
@@ -64,4 +68,4 @@ Part 1's historical factor tests use longer samples specified in its report. Dif
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md), [data contract](docs/data_contract.md), [shared interfaces](docs/interfaces.md), and [scope](docs/scope.md) before contributing. PRs run CI on Python 3.12.14; CI configuration alone is not a claim that branch protection is enabled.
 
-Use a short-lived branch and a pull request. Keep raw inputs unchanged, preserve source attribution, and update code, runner, documentation, checks and affected results together. Do not commit credentials, local absolute paths, virtual environments or generated temporary files. This private teaching repository does not grant redistribution rights over course/provider materials.
+Use a short-lived branch and a pull request. Keep raw inputs unchanged, preserve source attribution, and update code, runner, documentation, checks and affected results together. Do not commit credentials, local absolute paths, virtual environments or generated temporary files. Public access to this teaching repository does not grant redistribution rights over course/provider materials.

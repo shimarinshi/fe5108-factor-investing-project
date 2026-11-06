@@ -1,6 +1,6 @@
 # Part 1 Factor Investing
 
-This is the report from the [original delivery archive](../../outputs/FE5108_Part1_Delivery_2026-10-21.zip), with repository-relative figure and data links. The archive retains the standalone scripts, supplementary tables and PDF/Word versions; Part 1 is not executed by `run_all.py`.
+Part 1 uses the shared instructor workbook. See the [standalone analysis guide](../../src/part_1/README.md) and [numerical tables](../../outputs/part_1/tables/). The [final report](../final_report/FE5108_Final_Project_Report.pdf) contains the submission text; `run_all.py` covers Parts 2–5.
 
 We examine whether academic factor premia persist, how investable factor indexes differ, and whether diversification and market volatility affect their outcomes. All numerical results use the classroom workbook [1]. MSCI comparisons cover January 1995 to July 2023, using 343 monthly Gross USD returns.
 
